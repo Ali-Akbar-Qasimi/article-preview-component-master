@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&family=Poppins:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #9eafc2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .sub-container {
+  width: 90%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 20px;
+  background-color: white;
+  position: relative;
+}
+
+.container .sub-container .image img {
+  width: 100%;
+  height: 230px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.container .sub-container .right-things {
+  padding: 30px;
+}
+
+.container .sub-container .right-things .texts .header-texts {
+  color: #48556a;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.container .sub-container .right-things .texts .paragraph-texts {
+  color: #6d7f97;
+  font-size: 13.9px;
+  font-weight: 500;
+  padding-top: 20px;
+}
+
+.container .sub-container .right-things .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 20vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .sub-container .right-things .profile .avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .sub-container .right-things .profile .avatar img {
+  width: 50px;
+  border-radius: 100%;
+}
+
+.container .sub-container .right-things .profile .avatar .profile-text {
+  font-size: 13px;
+}
+
+.container .sub-container .right-things .profile .avatar .profile-text p:first-child {
+  color: #48556a;
+  font-weight: 700;
+}
+
+.container .sub-container .right-things .profile .avatar .profile-text p:nth-child(2) {
+  color: #9eafc2;
+  padding-top: 5px;
+}
+
+.container .sub-container .right-things .profile .share.open .hidden {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
+.container .sub-container .right-things .profile .share {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .sub-container .right-things .profile .share .img {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  z-index: 5;
+  border-radius: 100%;
+  margin-bottom: 10px;
+}
+
+.container .sub-container .right-things .profile .share .hidden {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0%;
+  width: 100%;
+  background-color: #48556a;
+  height: 20%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  padding-left: 50px;
+  gap: 30px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
+.container .sub-container .right-things .profile .share .hidden img {
+  width: 30px;
+  height: 30px;
+}
+
+@media (min-width: 687px) {
+  .container .sub-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 80%;
+    height: 60v;
+  }
+  .container .sub-container .image {
+    width: 50%;
+  }
+  .container .sub-container .image img {
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .container .sub-container .right-things {
+    width: 60%;
+  }
+  .container .sub-container .right-things .profile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .container .sub-container .right-things .profile .share.open .hidden {
+    opacity: 1;
+    -webkit-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+    visibility: visible;
+  }
+  .container .sub-container .right-things .profile .share {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+  }
+  .container .sub-container .right-things .profile .share .img {
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: #48556a;
+    border-radius: 100%;
+  }
+  .container .sub-container .right-things .profile .share .hidden {
+    z-index: 10;
+    color: white;
+    width: 300px;
+    height: 10vh;
+    top: -250%;
+    right: -300%;
+    border-radius: 10px;
+    padding-left: 20px;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+    background-color: #48556a;
+  }
+  .container .sub-container .right-things .profile .share .hidden::after {
+    content: '';
+    background-color: #48556a;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    bottom: -14%;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    left: 60%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&family=Poppins:wght@300&display=swap');
+
+
+$headerColor: hsl(217, 19%, 35%);
+$paragraphColor: hsl(214, 17%, 51%);
+$GrayishBlue: hsl(212, 23%, 69%);
+$backgroundColor: hsl(0, 0%, 100%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Manrope', sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: $GrayishBlue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .sub-container{
+        width: 90%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        background-color: $backgroundColor;
+        position: relative;
+        .image{
+            img{
+                width: 100%;
+                height: 230px;
+                object-fit: cover;
+                border-radius: 20px 20px 0 0;
+            }
+        }
+        .right-things{
+            padding: 30px;
+            .texts{
+                .header-texts{
+                    color: $headerColor;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+                .paragraph-texts{
+                    color: $paragraphColor;
+                    font-size: 13.9px;
+                    font-weight: 500;
+                    padding-top: 20px;
+                }
+            }
+            .profile{
+                display: flex;
+                align-items: flex-end;
+                height: 20vh;
+                //gap: 30px;
+                justify-content: space-between;
+                .avatar{
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    img{
+                        width: 50px;
+                        border-radius: 100%;
+                    }                
+                    .profile-text{
+                        font-size: 13px;
+                        p:first-child{
+                            color: $headerColor;
+                            font-weight: 700;
+                        }
+                        p:nth-child(2){
+                            color: $GrayishBlue;
+                            padding-top:5px;
+                        }
+                    }
+                }    
+                .share.open .hidden{
+                    visibility: visible;
+                    opacity: 1;
+                    transition: opacity .3s ease-in-out;
+                }                
+                .share{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;               
+                    .img{
+                        width: 30px;
+                        height: 30px;
+                        padding: 5px;
+                        z-index: 5;
+                        border-radius: 100%;
+                        margin-bottom: 10px;
+                    }
+                    .hidden{
+                        display: flex;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0%;
+                        width: 100%;
+                        background-color: $headerColor;
+                        height: 20%;
+                        align-items: center;
+                        color: white;
+                        padding-left: 50px;
+                        gap: 30px;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: opacity .3s ease-in-out;
+                        img{
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:687px){
+    .container{
+        .sub-container{
+            display: flex;
+            flex-direction: row;
+            width: 80%;
+            height: 60v;
+            .image{
+                width: 50%;
+                img{
+                    height: 100%;
+
+                    border-radius: 20px 0 0 20px;
+                    object-fit: cover;
+                }
+            }
+            .right-things{
+                width: 60%;
+                .profile{
+                    display: flex;
+                    align-items: flex-end;                        
+                    .share.open .hidden {
+                       opacity: 1;
+                       transition: opacity .3s ease-in-out;
+                       visibility: visible;
+                    }
+                    .share{
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        .img{
+                            z-index: 10;
+                            width: 30px;
+                            height: 30px;
+                            margin-bottom: 10px;
+                            background-color: $headerColor;
+                            border-radius: 100%;
+                        }
+                        .hidden{
+                            z-index: 10;
+                            color: white;
+                            width: 300px;
+                            height: 10vh;
+                            top: -250%;
+                            right: -300%;
+                            border-radius: 10px;
+                            padding-left: 20px;
+                            visibility: hidden;
+                            opacity: 0;
+                            transition: opacity .3s ease-in-out;
+                            background-color: $headerColor;
+                        }
+                        .hidden::after{
+                            content: '';
+                            background-color: $headerColor;
+                            height: 20px;
+                            width: 20px;
+                            position: absolute;
+                            bottom: -14%;
+                            transform: rotate(45deg);
+                            left: 60%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
